@@ -5,7 +5,7 @@ public class Main {
 
 // Задание 1
 
-    public static void checkLeapYear(int year) {
+    private static void checkLeapYear(int year) {
         boolean leapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
         if (leapYear) {
             System.out.println(year + " is a leap year");
@@ -17,7 +17,7 @@ public class Main {
 
 // Задание 2
 
-    public static void getDataClientOS(int clientOS, int clientDeviceYear) {
+    private static void findDataClientOS(int clientOS, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
         if (clientOS == 0 && clientDeviceYear == currentYear) {
             System.out.println("Install the iOS version of the app by following the link");
@@ -35,7 +35,7 @@ public class Main {
 
 // Задание 3
 
-    public static void calculateDeliveryTime(int deliveryDistance) {
+    private static void calculateDeliveryTime(int deliveryDistance) {
         if (deliveryDistance <= 20) {
             System.out.println("It will take 1 day");
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
@@ -51,7 +51,7 @@ public class Main {
 
     public static void main(String[] args) {
         checkLeapYear(2024);
-        getDataClientOS(0, 2020);
+        findDataClientOS(0, 2020);
         calculateDeliveryTime(35);
 
         }
